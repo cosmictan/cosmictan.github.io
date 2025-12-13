@@ -5,43 +5,124 @@
   <title>Tania Ahmed</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    /* Layout */
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 0 20px;
-      line-height: 1.6;
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f5f5f5;
       color: #222;
-      background-color: #f9f9f9;
     }
-    h1 { font-size: 2.5em; margin-bottom: 0.2em; }
-    .subtitle { color: #555; margin-bottom: 1.5em; font-size: 1.1em; }
-    a { color: #0066cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    nav ul { list-style: none; padding: 0; margin: 20px 0; display: flex; gap: 20px; }
-    nav ul li { display: inline; }
+    nav {
+      width: 250px;
+      background-color: #1f1f1f;
+      color: white;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+    nav h2 {
+      color: #ffcc00;
+      margin-bottom: 30px;
+      font-size: 1.8em;
+    }
+    nav a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      margin: 15px 0;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 50px;
+      max-width: 800px;
+      box-sizing: border-box;
+      background-color: #fff;
+    }
+
+    /* Headshot */
+    .headshot {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+    .subtitle {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* Sections */
+    h2.section-title {
+      color: #ff6600;
+      border-bottom: 2px solid #ff6600;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px){
+      body { flex-direction: column; }
+      nav { width: 100%; padding: 20px; text-align: center; }
+      main { padding: 20px; }
+      .headshot { width: 120px; }
+    }
   </style>
 </head>
 <body>
 
-  <h1>Tania Ahmed</h1>
-  <div class="subtitle">
-    Astrophysics · RF & Microwave · Antennas & Propagation · Astro-instrumentation
-  </div>
-
-  <p>
-    Welcome! I am a researcher with dual PhDs in Electrical Engineering and Astrophysics, working on dust obscuration in galaxies, advanced astronomical instrumentation, and RF & Microwave. 
-    This site showcases my research, publications, CV, and projects.
-  </p>
-
   <nav>
-    <ul>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <img src="assets/images/headshot.jpg" alt="Tania Ahmed" class="headshot">
+    <h2>Tania Ahmed</h2>
+    <a href="index.html">Home</a>
+    <a href="cv.html">CV</a>
+    <a href="publications.html">Publications</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
+  <main>
+    <h1>Welcome!</h1>
+    <div class="subtitle">
+      Astrophysics · RF & Microwave · Antennas & Propagation · Astro-instrumentation
+    </div>
+
+    <p>
+      I am a researcher with dual PhDs in Electrical Engineering and Astrophysics, specializing in dust obscuration in galaxies, astronomical instrumentation, and signal processing. 
+      This site showcases my research, publications, CV, and projects.
+    </p>
+
+    <h2 class="section-title">Current Research</h2>
+    <p>
+      My research focuses on understanding how dust affects observations of galaxies, modeling advanced multi-object spectroscopy instrumentation, and developing tools for detector characterization.
+    </p>
+
+    <h2 class="section-title">Highlights</h2>
+    <ul>
+      <li>Developed a CMOS detector noise characterization and gain calibration tool</li>
+      <li>Contributed to astronomical fiber positioning systems for multi-object spectrographs</li>
+      <li>Published papers on galaxy dust obscuration and instrumentation modeling</li>
+    </ul>
+
+  </main>
 </body>
 </html>
