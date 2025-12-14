@@ -17,6 +17,15 @@
     @media(max-width:900px){ body{flex-direction:column;} nav{width:100%; padding:20px;text-align:center;} main{padding:20px;} }
   </style>
 </head>
+  <div id="footer"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
 <body>
 
   <nav>
